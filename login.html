@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        .left {
+            background-color: #e0f7e4;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .left img {
+            width: 150px;
+            height: auto;
+        }
+        .anonymous {
+            position: absolute;
+            bottom: 20px;
+            background-color: #009688;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .right {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .right h2 {
+            margin: 0 0 20px;
+            color: #4caf50;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .signup-button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .signup-button:hover {
+            background-color: #45a049;
+        }
+        .or {
+            text-align: center;
+            margin: 20px 0;
+            color: #666;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-around;
+        }
+        .social-login button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .social-login img {
+            width: 32px;
+            height: 32px;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-link a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="tree.png" alt="Tree Illustration">
+            <div class="anonymous">Anonymous</div>
+        </div>
+        <div class="right">
+            <h2>Leaf</h2>
+            <form action="/signup" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="signup-button">Sign-Up</button>
+            </form>
+            <div class="or">- OR -</div>
+            <div class="social-login">
+                <button><img src="C:/Users/OPRCT_ASIF/Desktop/login/google.png" alt="Google"></button>
+                <button><img src="C:/Users/OPRCT_ASIF/Desktop/login/facebook.png" alt="Facebook"></button>
+                <button><img src="C:/Users/OPRCT_ASIF/Desktop/login/apple.png" alt="Apple"></button>
+            </div>
+            <div class="login-link">
+                Already have an account? <a href="/login">Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
